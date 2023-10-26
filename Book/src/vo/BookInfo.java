@@ -7,12 +7,12 @@ import java.util.Scanner;
 public class BookInfo { // 책 검색, 정보저장
 	
 	Scanner sc = new Scanner(System.in);
+	
 
 	private List<String> bookList;
 	private String name;
 
-	public BookInfo() {
-	    }
+
 	
 	public void regBook() {
 		bookList = new ArrayList<String>();
@@ -29,15 +29,19 @@ public class BookInfo { // 책 검색, 정보저장
 		}
 	}
 	
+	
 	public void showBookInfo() {
-		System.out.println("=============");
-		System.out.println("책정보출력");
-		for(String blist : bookList) {
-			System.out.println(blist);
-		}
-		System.out.println("=============");
+	    System.out.println("=============");
+	    System.out.println("책정보출력");
+	    for(String blist : bookList) {
+	    	System.out.println(blist);
+	    }
+	    System.out.println("=============");
+	   
 	}
 	
+	
+
 	public List<String> getBookList() {
         return bookList;
     }
