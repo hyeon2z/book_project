@@ -1,0 +1,44 @@
+마이페이지
+
+구현목록(구현된 항목)
+1. 주문내역 OrderDetail
+	주문내역 조회/변경/취소 OrderDetailCheck / OrderDetailChange / OrderDetailCancel
+	반품/교환 내역 ReturnDetail / ExchangeDetail
+	취소 주문 내역 OrderCancelDetail
+	선물내역 GiftDetail
+	===============
+	eBook 구매목록
+	북펀딩/굿즈펀딩 내역
+	매장 구매 전자영수증
+	럭키백 할인 내역	   
+	
+2. 회원정보 관리 MemInfoManage
+	개인정보 수정 EditUserInfo
+	    - 개인정보 수정기능/개정연동여부 포함
+	        필수데이터 : 성명, 닉네임, 이메일주소, 주소, 휴대전화, 개인정보 유효기간, 계정연동여부
+	        
+	회원탈퇴 Withdrawal
+	    - 회원탈퇴 기능
+	        필수데이터 : 출고이전 주문 있으면 탈퇴 안되게 주문내역 조회. 그리고 동의합니다 물어보기
+	        
+	배송주소록 DeliveryAddress
+	    - 배송주소록 추가/수정/삭제
+	        필수데이터 : 저장된 배송지(수령인,주소)
+	        
+	================
+	알라딘 멤버십 조회
+	알라딘 페이/정기결제
+	이벤트 당첨 내역
+	마이리뷰/페이퍼관리
+	
+3. 중고판매내역 UsedSale
+    중고팔기 내역 UsedSaleHistory
+    중고팔기 취소 내역 UsedSaleCancelHistory
+    회원에게 팔기 조회 SellMemCheck
+    판매자 정보 수정 EditSellerInfo
+    =================
+    중고매장 영수증 등록
+    
+회원정보 관리
+주문내역
+중고판매내역
