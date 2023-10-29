@@ -12,7 +12,7 @@ public class DeliveryAddress extends UserInfo{ // 기본 배송지 외 배송주
 		while(true) {
 			System.out.println("\n=====배송지 목록=====");
 			int cnt = 1;
-			for(String addresslist : getAddressList()) {
+			for(String addresslist : addressList) {
 				System.out.print(cnt + ") " +addresslist);
 				if(cnt == 1) {
 					System.out.print("(기본주소)");

@@ -8,7 +8,7 @@ public class EditUserInfo extends UserInfo{  // 개인정보 수정
 	String[] UserInfoDetail = {"이름", "닉네임", "이메일 주소", "주소", "핸드폰 번호", "개인정보 유효기간"};
 	
 	public void userInfo() {
-		String[] UserInfo = {getName(), getNickName(), getEmail(), getAddress(), getPhoneNumber(), getUserInfoExpirDate()};
+		String[] UserInfo = {getName(), getNickName(), getEmail(), addressList.get(0), getPhoneNumber(), getUserInfoExpirDate()};
 		
 		System.out.println("\n=====회원의 개인정보 출력=====");
 		for(int i = 0; i < UserInfo.length; i ++) {
@@ -44,7 +44,7 @@ public class EditUserInfo extends UserInfo{  // 개인정보 수정
 								int userAccess = Integer.parseInt(sc.nextLine());
 								switch(userAccess) {
 									case 1:
-										setAddress(userAddress);
+										addressList.set(0, userAddress);
 										break; // 변경 후 반복문 탈출
 									case 2:
 										continue; // 변경내용 입력으로 다시 돌아감
@@ -99,7 +99,7 @@ public class EditUserInfo extends UserInfo{  // 개인정보 수정
 								cnt++;
 							}
 							try {
-								System.out.print("변경할 개인정보 유효기간을 입력하세요 : ");
+								System.out.print("\n변경할 개인정보 유효기간을 입력하세요 : ");
 								int userExpirDateNumber = Integer.parseInt(sc.nextLine())-1;
 								if(userExpirDateNumber == userInfoExpirDate) {
 									System.out.println("이미 설정되어있는 유효기간입니다!");

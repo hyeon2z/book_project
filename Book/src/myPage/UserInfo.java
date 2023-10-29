@@ -12,7 +12,7 @@ public class UserInfo { // 회원가입한 유저의 정보 저장
 	private String phoneNumber = "010-9876-5432";
 	protected String[] InfoExpirDate = {"1년", "2년", "3년"}; // 개인정보 유효기간 배열로저장
 	protected int userInfoExpirDate = 0; // 유저의 개인정보 선택 저장
-	
+
 	public ArrayList<String> getAddressList() {
 		return addressList;
 	}
