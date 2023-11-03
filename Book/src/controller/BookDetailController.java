@@ -87,11 +87,11 @@ public class BookDetailController {
 						System.out.println("이미 장바구니에 있습니다.");
 					}
 				} else if (buyNum == 2) {
-					System.out.println("\n------------\n");
+					System.out.println();
 					System.out.println("구매 페이지로 이동합니다.");
-					System.out.println("\n------------\n");
+					System.out.println("-------------------------");
 					bookDetailService.buyBook(user, userBook);
-
+					System.out.println();
 				}
 			}
 			if (userNum == 2 && !user.getBooks().isEmpty()) {
@@ -123,11 +123,10 @@ public class BookDetailController {
 				user.chargingAccount(Integer.parseInt(scan.nextLine()));
 				System.out.println("충전 완료. 충전 완료된 잔액 : " + user.getAccount());
 			} else if (userNum == 4) {
-				System.out.println("======= 구매한 책 =======");
+				bookDetailService.boughtBook(user);
 				
 			}
 			
-
 		}
 
 	}

@@ -50,5 +50,10 @@ public class BookDetailService {
 			System.out.println("남은 잔액 : " + user.getAccount());
 		}
 	}
+	
+	public void boughtBook(User user) {
+		System.out.println("======= 구매한 책 =======");
+		user.getBuyBook();
+	}
 
 }

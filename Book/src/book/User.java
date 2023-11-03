@@ -15,9 +15,9 @@ public class User {
 	// 일단 전체 구매로만 구현
 	private Set<Book> books;
 	private List<Book> buyBooks;
-	
+
 	private int account;
-	
+
 	public User(String id, String pass, String name) {
 		this.id = id;
 		this.pass = pass;
@@ -29,7 +29,7 @@ public class User {
 	public Set<Book> getBooks() {
 		return books;
 	}
-	
+
 	public void updateBooks(Book book) {
 		books.add(book);
 	}
@@ -41,25 +41,30 @@ public class User {
 	public void buyBook(Book book) {
 		buyBooks.add(book);
 	}
-	
+
 	public void buyBookAccount(int price) {
 		account -= price;
 	}
-	
+
 	public void chargingAccount(int money) {
 		account += money;
 	}
-	
+
 	public boolean isBuyBook() {
 		return false;
 	}
-	
+
 	public void getBuyBook() {
-		System.out.println("총 " + buyBooks.size() + "권 구매했습니다.");
-		for (Book book : buyBooks) {
-			book.getBookTitle();
+		if (buyBooks.size() > 0) {
+			System.out.println("총 " + buyBooks.size() + "권 구매했습니다.");
+			System.out.println("--------------------------");
+			for (Book book : buyBooks) {
+				System.out.println(book.getBookTitle());
+			}
+			System.out.println();
+		} else {
+			System.out.println("구매한 책이 없습니다.");
 		}
 	}
 
-	
 }
